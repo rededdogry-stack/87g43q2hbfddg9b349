@@ -2,7 +2,20 @@
 var params = new URLSearchParams(window.location.search);
 
 function sendTo(url){
-    location.href = `/FistaszjoObywatel/${url}?` + params;
+    // Przekierowania na konkretne pliki HTML
+    if(url === 'documents') {
+        location.href = 'documents.html' + window.location.search;
+    } else if(url === 'qr') {
+        location.href = 'qr.html' + window.location.search;
+    } else if(url === 'services') {
+        location.href = 'services.html' + window.location.search;
+    } else if(url === 'more') {
+        location.href = 'more.html' + window.location.search;
+    } else if(url === 'home') {
+        location.href = 'home.html' + window.location.search;
+    } else {
+        location.href = url + '.html' + window.location.search;
+    }
 }
 
 document.querySelectorAll(".bottom_element_grid").forEach((element) => {
