@@ -55,15 +55,11 @@
             </div>
         </div>
         <script>
-        // Przekierowanie na card.html z parametrami z indexu
         document.getElementById('mdowod-card').onclick = function() {
-            // Pobierz parametry z window.location.search
             var params = window.location.search;
-            // Przekieruj na card.html z tymi parametrami
             window.location.href = 'card.html' + params;
         };
-    </script>
-    <!-- Usunięto nadmiarowy div zamykający, by nie było przerwy -->
+        </script>
         <div class="card_below_grid">
             <p class="title">Usługi</p>
             <button class="main_button all_services" onclick="sendTo('services')">Wszystkie</button>
