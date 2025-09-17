@@ -46,7 +46,7 @@
             <button class="main_button">Dodaj</button>
             <button class="main_button all_documents" onclick="sendTo('documents')">Wszystkie</button>
         </div>
-        <div class="card" onclick="sendTo('card')">
+        <div class="card" id="mdowod-card">
             <img class="background" src="images/CHANGE_IT_home_mid_card.svg">
             <img class="human" src="images/coi_common_ui_ic_document_id.svg" width="33" height="35" >
             <div class="id_bottom">
@@ -54,6 +54,16 @@
                 <img class="arrow" src="images/ic_arrow_forward_Dgray.svg">
             </div>
         </div>
+        <script>
+        // Przekierowanie na card.html z parametrami z indexu
+        document.getElementById('mdowod-card').onclick = function() {
+            // Pobierz parametry z window.location.search
+            var params = window.location.search;
+            // Przekieruj na card.html z tymi parametrami
+            window.location.href = 'card.html' + params;
+        };
+    </script>
+    <!-- Usunięto nadmiarowy div zamykający, by nie było przerwy -->
         <div class="card_below_grid">
             <p class="title">Usługi</p>
             <button class="main_button all_services" onclick="sendTo('services')">Wszystkie</button>
